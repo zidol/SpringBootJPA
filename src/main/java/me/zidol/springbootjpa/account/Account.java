@@ -12,6 +12,16 @@ public class Account {
     private Long id;
     private  String username;
     private  String password;
+    private  String email;
+    private boolean active;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     public Long getId() {
         return id;
@@ -50,5 +60,13 @@ public class Account {
     @Override
     public int hashCode() {
         return Objects.hash(id, username, password);
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
     }
 }
